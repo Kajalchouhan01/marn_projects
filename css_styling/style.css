@@ -1,0 +1,45 @@
+body{
+    background-color: black;
+    color: white;
+    margin: 100px 200px 100px;
+}
+.box{
+    background-color: black;
+    
+    height: 270px;
+    width: 180px;
+    
+    border-radius: 10px;
+    text-align: center;
+    box-shadow:  100px lightblue;
+   
+
+}
+.box:hover{
+    border: 3px solid white;
+    border-radius: rounded;
+    box-shadow:lightseagreen 0px 2px 100px 20px;
+
+}
+input {
+  border: none;
+  border-bottom: 2px solid white;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  
+}
+#date {
+    width: 170px;
+    
+}
+
+select {
+    
+    border: none;
+    border-bottom: 2px solid white;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    width: 170px;
+}

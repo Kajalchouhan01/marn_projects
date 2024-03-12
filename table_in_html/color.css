@@ -1,0 +1,21 @@
+table{
+    width: 700px;
+}
+.one{
+ background-color: rgb(133, 195, 195);
+ border:solid black;
+}
+.two{
+    background-color:#85c3c3 ;
+    border: solid black;
+    border-radius: 10px;
+    border-width: 2px;
+    
+}
+.three{
+    border: solid black;
+    border-radius: 10px;
+    border-width: 2px;
+}
+
+
