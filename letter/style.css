@@ -1,0 +1,262 @@
+*{
+   
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0;
+    
+}
+BODY{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 100%;
+    background-color: black;
+}
+.main{
+    width: 80px;
+    height: 0px;
+    /* background-color: transparent; */
+    border: 200px  solid white;
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%,-50%);
+    
+    border-left-color: rgb(186, 168, 95) ;
+    border-top-color:transparent;
+    border-bottom-color: rgb(186, 168, 95);
+    border-right-color:  rgb(186, 168, 95);
+    transform: skew(10deg);
+    border-radius:4px ;
+    z-index: 3;
+}
+.open{
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    box-sizing: border-box;
+    left: 45.3%;
+    /* top: -43%; */
+    top: -20%;
+    background-color: transparent;
+    border: 203px  solid transparent;
+    border-bottom-color: rgb(186, 168, 95);
+    transform: skew(10deg);
+    border-radius: 10px;
+    
+}
+.letter1{
+    background-color: white;
+    color:black;
+    height: 380px;
+    width: 330px;
+    transform: skew(10deg);
+    position: absolute;
+    left: 50%;
+    top: 25%;
+  
+} 
+.letter1:hover{
+    animation-name: inform;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+}
+@keyframes inform{
+    
+     from{
+        top:25%;
+        
+    }
+    to{
+        top:5%;
+       
+    }
+   
+    
+}
+.letter2{
+    background-color: pink;
+    color:black;
+    height: 430px;
+    width: 320px;
+    transform: skew(10deg);
+    position: absolute;
+    left: 51%;
+    top: 30%;
+  
+} 
+.letter2:hover{
+    animation-name: l2;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+}
+@keyframes l2{
+   
+    from{
+        top:30%;
+       
+    }
+    to{
+        top:-5%;
+       
+    }
+   
+
+}
+.but{
+    display: flex;
+    justify-content: center;
+   
+}
+button{
+    
+    margin-top: 2px;
+}
+.bubble{
+    position:relative;
+    display: flex;
+    
+ }
+ .bubble span{
+     position: relative;
+     width: 10px;
+     height: 10px;
+     background: rgb(51, 116, 162);
+     margin: 6.4px;
+     border-radius: 50%;
+     animation: animate 15s linear infinite;
+     animation-duration: calc(120s / var(--i));
+     box-shadow: 0 0 0 10px rgb(112, 124, 118), 
+     0 0 50px rgb(11, 112, 128),
+      0 0 100px  rgb(11, 112, 128);
+ }
+ .bubble span:nth-child(even)
+    {
+     background: rgb(102, 6, 22);
+     box-shadow: 0 0 0 10px rgb(120, 26, 68), 
+     0 0 50px rgb(109, 21, 88),
+      0 0 100px  rgb(106, 7, 66);
+    }
+ @keyframes animate{
+     0%{
+         transform: translateY(54vh) scale(0);
+     }
+     90%{
+         transform: translateY(-90vh) scale(1);
+     }
+ }
+
+
+ @media screen and (max-width: 412px){
+    .main{
+        width: 0px;
+        height: 0px;
+        /* background-color: transparent; */
+        border: 100px  solid white;
+        box-sizing: border-box;
+        position: absolute;
+        left: 20%;
+        top: 55%;
+        transform: translate(-50%,-50%);
+        
+        border-left-color: rgb(186, 168, 95) ;
+        border-top-color:transparent;
+        border-bottom-color: rgb(186, 168, 95);
+        border-right-color:  rgb(186, 168, 95);
+        transform: skew(10deg);
+        border-radius:4px ;
+        z-index: 3;
+    }
+    .open{
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        box-sizing: border-box;
+        left: 12.3%;
+        /* top: -43%; */
+        top: 33.4%;
+        background-color: transparent;
+        border: 100px  solid transparent;
+        border-bottom-color: rgb(186, 168, 95);
+        transform: skew(10deg);
+        border-radius: 10px;
+        
+    }
+    .letter1{
+        background-color: white;
+        color:black;
+        height: 230px;
+        width: 180px;
+        transform: skew(10deg);
+        position: absolute;
+        left: 19.9%;
+        top: 48%;
+        font-size:xx-small;
+      
+    } 
+    .letter1:hover{
+        animation-name: inform;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+    }
+    @keyframes inform{
+        
+         from{
+            top:48%;
+            
+        }
+        to{
+            top:38%;
+           
+        }
+       
+        
+    }
+    .letter2{
+        background-color: pink;
+        color:black;
+        height: 230px;
+        width: 180px;
+        transform: skew(10deg);
+        position: absolute;
+        left: 19.9%;
+        top: 51%;
+        font-size:xx-small;
+      
+    } 
+    .letter2:hover{
+        animation-name: l2;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+    }
+    @keyframes l2{
+       
+        from{
+            top:51%;
+           
+        }
+        to{
+            top:20%;
+           
+        }
+       
+    
+    }
+ }

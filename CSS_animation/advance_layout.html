@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto 1fr auto;
+            grid-gap: 10px;
+            height: 100vh;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .header, .footer {
+            grid-column: span 2;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .sidebar {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            overflow: auto;
+        }
+
+        .main {
+            padding: 20px;
+            overflow: auto;
+        }
+
+        .navbar {
+            display: flex;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .navbar a {
+            padding: 14px 20px;
+            text-decoration: none;
+            color: white;
+            transition: color 0.5s;
+        }
+
+        .navbar a:hover {
+            color: #FF5733;
+        }
+
+        .animated-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #FF5733;
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: background-color 2s;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .animated-button:hover {
+            background-color: #4CAF50;
+        }
+
+        .card {
+            width: 200px;
+            height: 300px;
+            perspective: 1000px;
+            margin: 20px;
+            display: inline-block;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: white;
+        }
+
+        .card-front {
+            background-color: #4CAF50;
+        }
+
+        .card-back {
+            background-color: #FF5733;
+            transform: rotateY(180deg);
+        }
+
+        .important-box {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        .override {
+            background-color: #FF5733 !important;
+            color: yellow !important;
+        }
+
+        .responsive-box {
+            width: calc(100% - 40px);
+            height: 100px;
+            margin: 20px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="sidebar">
+            <div class="navbar">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="animated-button">Click Me</button>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">Front</div>
+                    <div class="card-back">Back</div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="important-box override">This box has overridden styles</div>
+            <div class="responsive-box">This box is responsive using calc()</div>
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

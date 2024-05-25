@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS !important Example</title>
+    <style>
+        .important-box {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        .override {
+            background-color: #FF5733 !important;
+            color: yellow !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="important-box override">This box has overridden styles</div>
+</body>
+</html>

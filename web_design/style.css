@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ .header{
+    background-image: linear-gradient(rgb(80, 53, 48), rgb(199, 190, 172) );
+    width: auto;
+    height: 50px;
+    border: 1px solid black;
+    display: flex;
+    position: relative;
+      
+ }
+ 
+
+ .header .options{
+    width: 70px;
+    height: 50px;
+    text-align: center;
+    padding: 15px;
+    
+ }
+ .header .options:hover{
+    background-color: white;
+    color: black;
+ }
+ 
+ .op{
+    border: 1px solid rgb(103, 101, 101);
+    width: 180px;
+    position: absolute;
+    top: 50px;
+    background-color: aliceblue;
+ }
+ .same1{
+    position: absolute;
+    left: 0px;
+    display: none;
+ }
+ .A:hover .same1{
+    display: block;
+ }
+ 
+ .same2{
+    position: absolute;
+    left: 60px;
+    display: none; 
+ }
+ .B:hover .same2{
+    display: block;
+ }
+ 
+ .same2:hover .op2{
+    display: block;
+ }
+ .opt1{
+    display: none; 
+    position: absolute;
+    left:180px;
+    top: 0px;
+    border: solid 1px black;
+    width: 200px;
+    background-color: aliceblue;
+ }
+ .z{
+    padding: 10px;
+ }
+ .z:hover{
+    background-color: aqua;
+    border: solid 1px rgb(75, 180, 180);
+ }
+ .op2:hover .opt1{
+    display: block;
+ }
+ .same3{
+    position: absolute;
+    left: 160px;
+    display: none;
+ }
+ .C:hover .same3{
+    display: block;
+ }
+ .same4{
+    position: absolute;
+    left:260px;
+    display: none;
+ }
+ .D:hover .same4{
+    display: block;
+ }
+ .same5{
+    position: absolute;
+    left:360px;
+    display: none;
+ }
+ .E:hover .same5{
+    display: block;
+ }
+ .same6{
+    position: absolute;
+    left:460px;
+    display: none;
+ }
+ .F:hover .same6{
+    display: block;
+ }
+
+ .same{
+    padding: 5px;
+    
+ }
+ .same:hover{
+    background-color: aqua;
+    border: 1px solid rgb(73, 209, 209);
+ }
+ .image img{
+   width: 208vh;
+   
+ }

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .d1{
+            width: 500px;
+            
+        }
+        .currency{
+            display: flex;
+            border: solid;
+            padding: 10px;
+            background-color: gray;
+        }
+        .calculator{
+            border: solid;
+            padding: 10px;
+            background-color: gray;
+        }
+        .convertor{
+            border: solid;
+            padding: 10px;
+            background-color: gray;
+        }
+        .interest{
+            border: solid;
+            padding: 10px;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>multiple calculator</h1>
+    <div class="currency">
+        <div class="d1">
+            <h2>Currency Convertor</h2>
+            <p>Enter INR</p>
+            <input type="text" id="currency" onchange="getValue()">
+            <p>Enter DIHRAM</p>
+            <input type="text" id="dir" onchange="getValue()">
+        </div>
+        <br>
+        <br>
+        <h1 id="result" ></h1>
+        <div class="d1">
+            <br><br>
+            <button id="usd">INR -> USD</button>
+            <br><br>
+            <button id="yen">INR -> YEN</button>
+            <br><br>
+            <button id="euro">INR -> EURO</button>
+            <br><br>
+            <button id="dihram">DIHRAM -> INR</button>
+        </div>
+    </div>
+    <br>
+    <div class="calculator">
+        <h2>Age Calculator</h2>
+    <input type="date" id="birthDate" placeholder="Enter your birthdate" />
+    <button onclick="calculateAge()">Calculate Age</button>
+    <p id="result2"></p>
+    </div>
+    <br>
+
+     <div class="convertor">
+    <h2>Degree to Fahrenheit Converter</h2>
+    <input type="number" id="degree" placeholder="Enter temperature in Celsius" />
+    <button onclick="convertToFar()">Convert</button>
+    <p id="result3"></p>
+</div>
+
+<div class="interest">
+    <h1>Interest Calculator</h1>
+
+    <h2>Simple Interest</h2>
+    <label for="principal">Principal:</label>
+    <input type="number" id="principal">
+    <br>
+    <label for="rate">Interest Rate (%):</label>
+    <input type="number" id="rate">
+    <br>
+    <label for="time">Time (years):</label>
+    <input type="number" id="time">
+    <br>
+    <button onclick="calculateSimpleInterest()">Calculate</button>
+    <br>
+    <p id="simpleInterestResult"></p>
+
+    <h2>Compound Interest</h2>
+    <label for="principalCompound">Principal:</label>
+    <input type="number" id="principalCompound">
+    <br>
+    <label for="rateCompound">Interest Rate (%):</label>
+    <input type="number" id="rateCompound">
+    <br>
+    <label for="timeCompound">Time (years):</label>
+    <input type="number" id="timeCompound">
+    <br>
+    <button onclick="calculateCompoundInterest()">Calculate</button>
+    <br>
+    <p id="compoundInterestResult"></p>
+
+</div>
+
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

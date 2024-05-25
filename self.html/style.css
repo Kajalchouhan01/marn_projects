@@ -1,0 +1,19 @@
+body{
+    background-color: black;
+    color: white;
+}
+.header{
+    background-color: black;
+    height: 100px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .container{
+    margin-left: 190px;
+}
+.header .item1{
+    display: flex;
+    gap: 50px;
+}

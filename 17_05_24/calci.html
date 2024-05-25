@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surface Area Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            margin: 5px;
+            padding: 10px;
+            width: calc(100% - 22px);
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button {
+            padding: 10px;
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Surface Area Calculator</h1>
+        
+        <h3>Cube</h3>
+        <input type="number" id="cube-side" placeholder="Side length">
+        <button onclick="calculateCubeSurfaceArea()">Calculate Cube Surface Area</button>
+        <div class="result" id="cube-result"></div>
+
+        <h3>Rectangular Prism</h3>
+        <input type="number" id="rect-length" placeholder="Length">
+        <input type="number" id="rect-width" placeholder="Width">
+        <input type="number" id="rect-height" placeholder="Height">
+        <button onclick="calculateRectPrismSurfaceArea()">Calculate Rectangular Prism Surface Area</button>
+        <div class="result" id="rect-result"></div>
+
+        <h3>Sphere</h3>
+        <input type="number" id="sphere-radius" placeholder="Radius">
+        <button onclick="calculateSphereSurfaceArea()">Calculate Sphere Surface Area</button>
+        <div class="result" id="sphere-result"></div>
+
+        <h3>Cylinder</h3>
+        <input type="number" id="cylinder-radius" placeholder="Radius">
+        <input type="number" id="cylinder-height" placeholder="Height">
+        <button onclick="calculateCylinderSurfaceArea()">Calculate Cylinder Surface Area</button>
+        <div class="result" id="cylinder-result"></div>
+    </div>
+
+    <script>
+        function calculateCubeSurfaceArea() {
+            const side = document.getElementById('cube-side').value;
+            const result = cubeSurfaceArea(parseFloat(side));
+            document.getElementById('cube-result').textContent = 'Surface Area: ' + result;
+        }
+
+        function calculateRectPrismSurfaceArea() {
+            const length = document.getElementById('rect-length').value;
+            const width = document.getElementById('rect-width').value;
+            const height = document.getElementById('rect-height').value;
+            const result = rectangularPrismSurfaceArea(parseFloat(length), parseFloat(width), parseFloat(height));
+            document.getElementById('rect-result').textContent = 'Surface Area: ' + result;
+        }
+
+        function calculateSphereSurfaceArea() {
+            const radius = document.getElementById('sphere-radius').value;
+            const result = sphereSurfaceArea(parseFloat(radius));
+            document.getElementById('sphere-result').textContent = 'Surface Area: ' + result;
+        }
+
+        function calculateCylinderSurfaceArea() {
+            const radius = document.getElementById('cylinder-radius').value;
+            const height = document.getElementById('cylinder-height').value;
+            const result = cylinderSurfaceArea(parseFloat(radius), parseFloat(height));
+            document.getElementById('cylinder-result').textContent = 'Surface Area: ' + result;
+        }
+
+        function cubeSurfaceArea(side) {
+            if (side <= 0) {
+                return 'Side length must be a positive number';
+            }
+            return 6 * Math.pow(side, 2);
+        }
+
+        function rectangularPrismSurfaceArea(length, width, height) {
+            if (length <= 0 || width <= 0 || height <= 0) {
+                return 'Dimensions must be positive numbers';
+            }
+            return 2 * (length * width + length * height + width * height);
+        }
+
+        function sphereSurfaceArea(radius) {
+            if (radius <= 0) {
+                return 'Radius must be a positive number';
+            }
+            return 4 * Math.PI * Math.pow(radius, 2);
+        }
+
+        function cylinderSurfaceArea(radius, height) {
+            if (radius <= 0 || height <= 0) {
+                return 'Dimensions must be positive numbers';
+            }
+            return 2 * Math.PI * radius * (radius + height);
+        }
+    </script>
+</body>
+</html>
